@@ -1089,3 +1089,9 @@
 		#footer .icons a {
 			color: #bbb;
 		}
+
+.contact-label {
+	display: inline-block;
+	width: 100px;
+	text-align: left;
+}

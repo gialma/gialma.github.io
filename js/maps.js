@@ -1,4 +1,5 @@
-var lat = 45.4096271, long = 11.8732357;
+var lat = 45.3967525
+var long = 11.8717103;
 
 // Google Maps Scripts
 var map = null;
@@ -99,7 +100,7 @@ function init() {
 			}, {
 				"color": "#000000"
 			}, {
-				"lightness": 40
+				"lightness": 60
 			}]
 		}, {
 			"elementType": "labels.icon",
