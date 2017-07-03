@@ -151,4 +151,7 @@ function init() {
 		map: map,
 		icon: image
 	});
+	beachMarker.addListener('click', function() {
+          window.open("https://www.google.com/maps/place/Gialma+Investigazioni/@45.396753,11.8717103,17z/data=!3m1!4b1!4m5!3m4!1s0x477eda450c986287:0x4a9a5757e20a656c!8m2!3d45.4096271!4d11.8732357", "_blank")
+        });
 }
