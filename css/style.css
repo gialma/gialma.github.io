@@ -43,7 +43,15 @@
 	p {
 		margin: 0 0 2em 0;
 	}
-
+	
+	p.reduceBottomMargin{
+		margin-bottom: 1em !important;
+	}
+	
+	.preventivoGratuito{
+		font-size:16pt;
+	}
+	
 	h1, h2, h3, h4, h5, h6 {
 		color: #666f77;
 		font-weight: 300;
