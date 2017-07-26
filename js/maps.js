@@ -1,31 +1,13 @@
 var lat = 45.3967525
 var long = 11.8717103;
 
-// Google Maps Scripts
-var map = null;
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-google.maps.event.addDomListener(window, 'resize', function() {
-	map.setCenter(new google.maps.LatLng(lat,long));
-});
-
 function init() {
-	// Basic options for a simple Google Map
-	// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 	var mapOptions = {
-		// How zoomed in you want the map to start at (always required)
 		zoom: 15,
-
-		// The latitude and longitude to center the map (always required)
-		center: new google.maps.LatLng(lat,long), // New York
-
-		// Disables the default Google Maps UI components
+		center: new google.maps.LatLng(lat,long),
 		disableDefaultUI: true,
 		scrollwheel: false,
 		draggable: false,
-
-		// How you would like to style the map.
-		// This is where you would paste any style found on Snazzy Maps.
 		styles: [{
 			"featureType": "water",
 			"elementType": "geometry",
@@ -152,6 +134,14 @@ function init() {
 		icon: image
 	});
 	beachMarker.addListener('click', function() {
-          window.open("https://www.google.com/maps/place/Gialma+Investigazioni/@45.396753,11.873899,15z/data=!4m5!3m4!1s0x0:0x4a9a5757e20a656c!8m2!3d45.396753!4d11.873899", "_blank")
-        });
+      window.open("https://www.google.com/maps/place/Gialma+Investigazioni/@45.396753,11.873899,15z/data=!4m5!3m4!1s0x0:0x4a9a5757e20a656c!8m2!3d45.396753!4d11.873899", "_blank")
+    });
+}
+
+function initMap() {
+	var map = null;
+	google.maps.event.addDomListener(window, 'load', init);
+	google.maps.event.addDomListener(window, 'resize', function() {
+		map.setCenter(new google.maps.LatLng(lat,long));
+	});
 }
