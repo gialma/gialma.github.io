@@ -1,5 +1,6 @@
-var lat = 45.3967525
+var lat = 45.3967525;
 var long = 11.8717103;
+var map = null;
 
 function init() {
 	var mapOptions = {
@@ -139,7 +140,6 @@ function init() {
 }
 
 function initMap() {
-	var map = null;
 	google.maps.event.addDomListener(window, 'load', init);
 	google.maps.event.addDomListener(window, 'resize', function() {
 		map.setCenter(new google.maps.LatLng(lat,long));
